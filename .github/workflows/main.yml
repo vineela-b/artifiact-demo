@@ -30,6 +30,7 @@ jobs:
   release_project:
     name: release project
     runs-on: ubuntu-latest
+    needs: deploy_source
     steps:
       - name: download artificat
         uses: actions/download-artifact@v3
