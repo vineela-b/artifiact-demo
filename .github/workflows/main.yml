@@ -27,3 +27,14 @@ jobs:
         with:
           name: demo-deploy
           path: artificats-folder/
+  release_project:
+    name: release project
+    runs-on: ubuntu-latest
+    steps:
+      - name: download artificat
+        uses: actions/download-artifact@v3
+        with:
+          name: demo-deploy
+      - name: test artificat downloaded
+        run: ls -R    
+          
